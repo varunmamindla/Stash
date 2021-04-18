@@ -15,6 +15,9 @@
 		D3C83728262BD79800479404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C83726262BD79800479404 /* LaunchScreen.storyboard */; };
 		D3C83733262BD79900479404 /* StashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83732262BD79900479404 /* StashTests.swift */; };
 		D3C8373E262BD79900479404 /* StashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8373D262BD79900479404 /* StashUITests.swift */; };
+		D3C83753262BDF4700479404 /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83752262BDF4700479404 /* AchievementsInteractor.swift */; };
+		D3C8375A262BE04300479404 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83759262BE04300479404 /* Achievements.swift */; };
+		D3C83763262C15F600479404 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = D3C83762262C15F600479404 /* achievements.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D3C83739262BD79900479404 /* StashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C8373D262BD79900479404 /* StashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashUITests.swift; sourceTree = "<group>"; };
 		D3C8373F262BD79900479404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C83752262BDF4700479404 /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
+		D3C83759262BE04300479404 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		D3C83762262C15F600479404 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		D3C8371A262BD79600479404 /* Stash */ = {
 			isa = PBXGroup;
 			children = (
+				D3C83761262C15D900479404 /* Resources */,
+				D3C83751262BDEAD00479404 /* Coach */,
 				D3C8371B262BD79600479404 /* AppDelegate.swift */,
 				D3C8371D262BD79600479404 /* SceneDelegate.swift */,
 				D3C8371F262BD79600479404 /* ViewController.swift */,
@@ -126,6 +134,23 @@
 				D3C8373F262BD79900479404 /* Info.plist */,
 			);
 			path = StashUITests;
+			sourceTree = "<group>";
+		};
+		D3C83751262BDEAD00479404 /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				D3C83752262BDF4700479404 /* AchievementsInteractor.swift */,
+				D3C83759262BE04300479404 /* Achievements.swift */,
+			);
+			path = Coach;
+			sourceTree = "<group>";
+		};
+		D3C83761262C15D900479404 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3C83762262C15F600479404 /* achievements.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C83728262BD79800479404 /* LaunchScreen.storyboard in Resources */,
+				D3C83763262C15F600479404 /* achievements.json in Resources */,
 				D3C83725262BD79800479404 /* Assets.xcassets in Resources */,
 				D3C83723262BD79600479404 /* Main.storyboard in Resources */,
 			);
@@ -260,7 +286,9 @@
 			files = (
 				D3C83720262BD79600479404 /* ViewController.swift in Sources */,
 				D3C8371C262BD79600479404 /* AppDelegate.swift in Sources */,
+				D3C83753262BDF4700479404 /* AchievementsInteractor.swift in Sources */,
 				D3C8371E262BD79600479404 /* SceneDelegate.swift in Sources */,
+				D3C8375A262BE04300479404 /* Achievements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

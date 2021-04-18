@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let temp = AchievementsInteractor()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        temp.fetchAchievemnts { _ in
+            print("Done.")
+        }
     }
-
-
 }
 
