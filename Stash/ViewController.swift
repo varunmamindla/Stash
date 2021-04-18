@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    let temp = AchievementsInteractor()
+final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        temp.fetchAchievemnts { _ in
-            print("Done.")
-        }
+        title = "Welcome"
+    }
+    
+    @IBAction func achievementsTapped(_ sender: Any) {
+        let viewController = AchievementsBulider.buildAchievementView()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

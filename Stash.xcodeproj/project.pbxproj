@@ -18,6 +18,15 @@
 		D3C83753262BDF4700479404 /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83752262BDF4700479404 /* AchievementsInteractor.swift */; };
 		D3C8375A262BE04300479404 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83759262BE04300479404 /* Achievements.swift */; };
 		D3C83763262C15F600479404 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = D3C83762262C15F600479404 /* achievements.json */; };
+		D3C83768262C17E900479404 /* AchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83767262C17E900479404 /* AchievementsPresenter.swift */; };
+		D3C8376D262C192E00479404 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8376C262C192E00479404 /* AchievementsViewController.swift */; };
+		D3C83774262C1EF900479404 /* AchievementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C83773262C1EF900479404 /* AchievementsViewController.xib */; };
+		D3C83779262C1F9100479404 /* AchievementsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83778262C1F9100479404 /* AchievementsBuilder.swift */; };
+		D3C8377F262C20B500479404 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8377E262C20B500479404 /* UIViewController+Extension.swift */; };
+		D3C83787262CAB4500479404 /* AchievementUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83786262CAB4500479404 /* AchievementUIModel.swift */; };
+		D3C8378E262CB3B000479404 /* AchievementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8378C262CB3B000479404 /* AchievementTableViewCell.swift */; };
+		D3C8378F262CB3B000479404 /* AchievementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C8378D262CB3B000479404 /* AchievementTableViewCell.xib */; };
+		D3C83796262CBD1E00479404 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C83795262CBD1E00479404 /* CacheImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		D3C83752262BDF4700479404 /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
 		D3C83759262BE04300479404 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
 		D3C83762262C15F600479404 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
+		D3C83767262C17E900479404 /* AchievementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenter.swift; sourceTree = "<group>"; };
+		D3C8376C262C192E00479404 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		D3C83773262C1EF900479404 /* AchievementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementsViewController.xib; sourceTree = "<group>"; };
+		D3C83778262C1F9100479404 /* AchievementsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsBuilder.swift; sourceTree = "<group>"; };
+		D3C8377E262C20B500479404 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D3C83786262CAB4500479404 /* AchievementUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementUIModel.swift; sourceTree = "<group>"; };
+		D3C8378C262CB3B000479404 /* AchievementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementTableViewCell.swift; sourceTree = "<group>"; };
+		D3C8378D262CB3B000479404 /* AchievementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementTableViewCell.xib; sourceTree = "<group>"; };
+		D3C83795262CBD1E00479404 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +123,7 @@
 		D3C8371A262BD79600479404 /* Stash */ = {
 			isa = PBXGroup;
 			children = (
+				D3C8377D262C209C00479404 /* Extensions */,
 				D3C83761262C15D900479404 /* Resources */,
 				D3C83751262BDEAD00479404 /* Coach */,
 				D3C8371B262BD79600479404 /* AppDelegate.swift */,
@@ -139,8 +158,14 @@
 		D3C83751262BDEAD00479404 /* Coach */ = {
 			isa = PBXGroup;
 			children = (
+				D3C8378B262CB38200479404 /* AchievementsCell */,
 				D3C83752262BDF4700479404 /* AchievementsInteractor.swift */,
 				D3C83759262BE04300479404 /* Achievements.swift */,
+				D3C83767262C17E900479404 /* AchievementsPresenter.swift */,
+				D3C8376C262C192E00479404 /* AchievementsViewController.swift */,
+				D3C83773262C1EF900479404 /* AchievementsViewController.xib */,
+				D3C83778262C1F9100479404 /* AchievementsBuilder.swift */,
+				D3C83786262CAB4500479404 /* AchievementUIModel.swift */,
 			);
 			path = Coach;
 			sourceTree = "<group>";
@@ -149,8 +174,26 @@
 			isa = PBXGroup;
 			children = (
 				D3C83762262C15F600479404 /* achievements.json */,
+				D3C83795262CBD1E00479404 /* CacheImageView.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3C8377D262C209C00479404 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8377E262C20B500479404 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3C8378B262CB38200479404 /* AchievementsCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3C8378C262CB3B000479404 /* AchievementTableViewCell.swift */,
+				D3C8378D262CB3B000479404 /* AchievementTableViewCell.xib */,
+			);
+			path = AchievementsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +299,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C83774262C1EF900479404 /* AchievementsViewController.xib in Resources */,
 				D3C83728262BD79800479404 /* LaunchScreen.storyboard in Resources */,
 				D3C83763262C15F600479404 /* achievements.json in Resources */,
+				D3C8378F262CB3B000479404 /* AchievementTableViewCell.xib in Resources */,
 				D3C83725262BD79800479404 /* Assets.xcassets in Resources */,
 				D3C83723262BD79600479404 /* Main.storyboard in Resources */,
 			);
@@ -284,11 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C8377F262C20B500479404 /* UIViewController+Extension.swift in Sources */,
+				D3C83768262C17E900479404 /* AchievementsPresenter.swift in Sources */,
 				D3C83720262BD79600479404 /* ViewController.swift in Sources */,
 				D3C8371C262BD79600479404 /* AppDelegate.swift in Sources */,
 				D3C83753262BDF4700479404 /* AchievementsInteractor.swift in Sources */,
 				D3C8371E262BD79600479404 /* SceneDelegate.swift in Sources */,
+				D3C8376D262C192E00479404 /* AchievementsViewController.swift in Sources */,
 				D3C8375A262BE04300479404 /* Achievements.swift in Sources */,
+				D3C83779262C1F9100479404 /* AchievementsBuilder.swift in Sources */,
+				D3C83796262CBD1E00479404 /* CacheImageView.swift in Sources */,
+				D3C8378E262CB3B000479404 /* AchievementTableViewCell.swift in Sources */,
+				D3C83787262CAB4500479404 /* AchievementUIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

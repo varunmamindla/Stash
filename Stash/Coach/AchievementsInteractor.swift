@@ -30,7 +30,8 @@ extension AchievementsInteractor: AchievementsInteracting {
             } catch {
                 completion(.failure(.loadFailed))
             }
+        } else {
+            completion(.failure(.loadFailed))
         }
-        completion(.failure(.loadFailed))
     }
 }
