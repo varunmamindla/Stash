@@ -38,7 +38,6 @@ final class AchievementsViewController: UIViewController {
         achievementsTableView.estimatedRowHeight = 100.0
         achievementsTableView.rowHeight = UITableView.automaticDimension
         achievementsTableView.separatorStyle = .none
-        
         achievementsTableView.register(AchievementTableViewCell.cellNib(), forCellReuseIdentifier: AchievementTableViewCell.cellIdentifier())
     }
 }
@@ -67,19 +66,20 @@ extension AchievementsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AchievementTableViewCell.cellIdentifier(), for: indexPath) as? AchievementTableViewCell else { return UITableViewCell(frame: CGRect.zero) }
         
-        /*guard let model = rewardsCardModel else { return cell }
-        let cardsCount = rewardsCardModel?.rewardCards.count ?? 0
-        
-        cell.cardExpirationLabel.text = model.expirationDateString(forCardAt: indexPath.row)
-        cell.cardAmountLabel.text = model.cardAmount(forCardAt: indexPath.row)
-        cell.starMoneyLabel.text = CardViewConstants.starMoneyTitle
-        cell.separatorView.isHidden = indexPath.row == cardsCount - 1 ? true : false*/
-        
+        guard let model = presenter?.achievementModel(for: indexPath.row) else { return cell }
+        cell.updateUI(with: model)
         return cell
-
     }
 }
 
 // MARK: - UITableViewDelegate
 
-extension AchievementsViewController: UITableViewDelegate {}
+extension AchievementsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? AchievementTableViewCell, let model = presenter?.achievementModel(for: indexPath.row) else { return }
+        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
+            cell.animateProgressBar(with: model.progressBarFill)
+            cell.alpha = model.isAccessible ? 1.0 : 0.5
+        })
+    }
+}

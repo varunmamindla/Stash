@@ -10,7 +10,9 @@ import Foundation
 protocol AchievementsPresenting {
     var title: String? { get }
     var noOfRows: Int { get }
+    
     func onViewWillAppear()
+    func achievementModel(for index: Int) -> AchievementViewState
 }
 
 final class AchievementsPresenter {
@@ -52,5 +54,9 @@ extension AchievementsPresenter: AchievementsPresenting {
                 strongSelf.view?.updateView()
             }
         }
+    }
+    
+    func achievementModel(for index: Int) -> AchievementViewState {
+        return achievemnetsUIModel[index]
     }
 }

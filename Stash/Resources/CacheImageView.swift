@@ -13,7 +13,7 @@ final class ImageLoader: UIImageView {
 
     var imageURL: URL?
     let activityIndicator = UIActivityIndicatorView()
-    func loadImageWithUrl(_ url: URL) {
+    func loadImage(with url: URL) {
 
         // setup activityIndicator...
         activityIndicator.color = .darkGray

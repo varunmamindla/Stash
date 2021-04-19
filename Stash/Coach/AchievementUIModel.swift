@@ -12,6 +12,7 @@ protocol AchievementViewState {
     var completedPoints: String { get }
     var totalPoints: String { get }
     var imageURL: String { get }
+    var progressBarFill: Float { get }
     var isAccessible: Bool { get }
 }
 
@@ -40,5 +41,10 @@ extension AchievementUIModel: AchievementViewState {
     
     var isAccessible: Bool {
         return model.isAcessible
+    }
+    
+    var progressBarFill: Float {
+        let progress = Float(model.progress) / Float(model.total)
+        return progress
     }
 }
