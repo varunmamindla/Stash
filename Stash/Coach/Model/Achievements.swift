@@ -28,6 +28,12 @@ struct AchievementInfo: Codable {
         title = try overviewInfo.decode(String.self, forKey: .title)
         achievements = try values.decode([Achievement].self, forKey: .achievements)
     }
+    
+    init(status: Bool, title: String, achievements: [Achievement]) {
+        self.status = status
+        self.title = title
+        self.achievements = achievements
+    }
 }
 
 struct Achievement: Codable {
@@ -55,5 +61,14 @@ struct Achievement: Codable {
         total = try values.decode(Int.self, forKey: .total)
         imageURL = try values.decode(String.self, forKey: .imageURL)
         isAcessible = try values.decode(Bool.self, forKey: .isAcessible)
+    }
+    
+    init(achievementId: Int, level: String, progress: Int, total: Int, imageURL: String, isAcessible: Bool) {
+        self.achievementId = achievementId
+        self.level = level
+        self.progress = progress
+        self.total = total
+        self.imageURL = imageURL
+        self.isAcessible = isAcessible
     }
 }

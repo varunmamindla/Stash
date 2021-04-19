@@ -59,6 +59,7 @@ class AchievementTableViewCell: UITableViewCell {
         levelLabel.text = model.level
         completedPointsLabel.text = model.completedPoints
         totalPointsLabel.text = model.totalPoints
+        isUserInteractionEnabled = model.isAccessible
         guard let url = URL(string: model.imageURL) else { return }
         achievementImage.loadImage(with: url)
     }

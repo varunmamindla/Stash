@@ -12,7 +12,7 @@ protocol AchievementsPresenting {
     var noOfRows: Int { get }
     
     func onViewWillAppear()
-    func achievementModel(for index: Int) -> AchievementViewState
+    func achievementUIModel(for index: Int) -> AchievementViewState
 }
 
 final class AchievementsPresenter {
@@ -56,7 +56,7 @@ extension AchievementsPresenter: AchievementsPresenting {
         }
     }
     
-    func achievementModel(for index: Int) -> AchievementViewState {
+    func achievementUIModel(for index: Int) -> AchievementViewState {
         return achievemnetsUIModel[index]
     }
 }

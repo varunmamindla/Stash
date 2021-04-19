@@ -53,6 +53,7 @@ extension AchievementsViewController: AchievementsViewing {
     
     func updateView() {
         title = presenter?.title
+        achievementsTableView.reloadData()
     }
 }
 
@@ -66,7 +67,7 @@ extension AchievementsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AchievementTableViewCell.cellIdentifier(), for: indexPath) as? AchievementTableViewCell else { return UITableViewCell(frame: CGRect.zero) }
         
-        guard let model = presenter?.achievementModel(for: indexPath.row) else { return cell }
+        guard let model = presenter?.achievementUIModel(for: indexPath.row) else { return cell }
         cell.updateUI(with: model)
         return cell
     }
@@ -76,10 +77,17 @@ extension AchievementsViewController: UITableViewDataSource {
 
 extension AchievementsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? AchievementTableViewCell, let model = presenter?.achievementModel(for: indexPath.row) else { return }
+        guard let cell = cell as? AchievementTableViewCell, let model = presenter?.achievementUIModel(for: indexPath.row) else { return }
         UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
             cell.animateProgressBar(with: model.progressBarFill)
             cell.alpha = model.isAccessible ? 1.0 : 0.5
         })
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let title = presenter?.achievementUIModel(for: indexPath.row).level
+        let alertView = UIAlertController(title: title, message: "Level Tapped!!. Soon you will be navigated to complete the course", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertView, animated: true, completion: nil)
     }
 }
